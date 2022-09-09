@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kick My Chair</title>
+    <link rel="stylesheet" href="remake.css" type="text/css">
+    <link rel="Tab Icon" type="x-icon" href="KickMyC\button.png">
+    <link rel="prefetch" href="KickMyC/kick.jpg" />
+    <link rel="prefetch" href="KickMyC/no_kick.jpg" />
+    <script src="remake.js"></script>
+  </head>
+  <body>
+    <div class="site-content">
+      <div class="header-container">
+        <a href="https://kickmychair.com">
+          <img src="KickMyC\thumbnail.png" alt="Kick My Chair Logo" id="header" />
+        </a>
+      </div>
+      <div class="chair-container">
+        <img alt="Kick My Chair" id="chair-content" src="KickMyC/no_kick.jpg">
+      </div>
+      <div class="kick-button-container">
+        <input type="Image" id="kick-button" src="KickMyC\button.png" alt="button" onclick="onKickClick()" />
+      </div>
+      <div class="counter-container">
+        <h1 id="counter">0</h1>
+      </div>
+      <div class="audio-container">
+        <audio controls loop id="kick-audio">
+          <source src="KickMyC\kicksong.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </body>                 
+</html> 

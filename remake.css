@@ -1,0 +1,70 @@
+:root {
+  --chair-image: url('KickMyC/no_kick.jpg');
+  --normal-shadow-color: rgba(0, 0, 0, 0.37);
+  --hover-shadow-color: rgba(0, 0, 0, 0.37);
+  --active-shadow-color: rgba(0, 0, 0, 0.8);
+  --background-gradient-top-color: rgb(240, 134, 208);
+  --background-gradient-bottom-color: rgb(73, 147, 156);
+}
+
+@font-face {
+  font-family: "ChairFont";
+  src: url('KickMyC/ChairFont.ttf');
+}
+
+img, input[type='image'], audio {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  background: linear-gradient(var(--background-gradient-top-color), var(--background-gradient-bottom-color));
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.site-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#header {
+  width: min(100%, 1000px);
+}
+
+#chair-content {
+  width: min(100%, 800px);
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem var(--normal-shadow-color);
+}
+
+#kick-button {
+  border: none;
+  max-height: 500px;
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  filter: drop-shadow(0 0.5rem 1rem var(--normal-shadow-color))
+}
+
+#kick-button:hover {
+  transform: translateY(-1vh);
+  filter: drop-shadow(0 0.5rem 2rem var(--hover-shadow-color))
+}
+
+#kick-button:active {
+  transform: translateY(5vh) scale(1.01, 0.95);
+  filter: drop-shadow(0 0.5rem 0.5rem var(--active-shadow-color))
+}
+
+#counter {
+  font-family: 'ChairFont';
+  font-size: max(7vw, 6rem);
+  color: rgb(52, 250, 141);
+  line-height: 0;
+}
